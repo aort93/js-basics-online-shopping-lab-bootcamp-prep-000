@@ -11,6 +11,7 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
+ //price of each item should be a randomly-generated integer between 1 and 100.
  const price = Math.floor(Math.random() * 100) + 1;
 
   cart.push({ [item]: price });
@@ -55,15 +56,15 @@ function viewCart() {
 
 function total() {
   // write your code here
-  let t = 0;
+  let total = 0;
 
  for (let i = 0, l = cart.length; i < l; i++) {
    for (let item in cart[i]) {
-     t += cart[i][item];
+     total += cart[i][item];
    }
  }
 
- return t;
+ return total;
 }
 
 function removeFromCart(item) {
@@ -97,4 +98,5 @@ function placeOrder(cardNumber) {
   cart = [];
 }
 
+console.log(cart);
 console.log(addToCart('toy', 'ice', 'fire'))
